@@ -2,7 +2,7 @@ name: mobile Push Test
 on:
   push:
     branches: [main]
-    paths-ignore: ["!packages/desktop/**"] # path 체크
+    paths-ignore: ["packages/desktop/**"] # path 체크
 
 defaults:
   run:
