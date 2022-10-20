@@ -2,7 +2,7 @@ name: Desktop Push Test
 on:
   push:
     branches: [main]
-    # paths: ["!packages/mobile/**"] # path 체크
+    paths: ["!packages/mobile/**"] # path 체크
 
 defaults:
   run:
