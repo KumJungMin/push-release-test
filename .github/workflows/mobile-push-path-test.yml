@@ -1,36 +1,44 @@
-# name: mobile Push Test
-# on:
-#   push:
-#     branches: [main]
-#     paths: ["!packages/desktop/**"] # path 체크
+name: mobile Push Test
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["!packages/desktop/**"] # path 체크
 
-# defaults:
-#   run:
-#     working-directory: packages/mobile
+defaults:
+  run:
+    working-directory: packages/mobile
 
-# jobs:
-#   push-mobile-1:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Setup Node
-#         uses: actions/setup-node@v1
-#         with:
-#           node-version: "16.x"
-#       - name: Install dependencies
-#         run: yarn install --prefer-offline
-#       - uses: actions/checkout@v2
-#       - name: mobile echo1
-#         run: yarn echo:push
+jobs:
+  push-mobile-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/checkout
+        uses: actions/checkout@v2
 
-#   push-mobile-2:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Setup Node
-#         uses: actions/setup-node@v1
-#         with:
-#           node-version: "16.x"
-#       - name: Install dependencies
-#         run: yarn install --prefer-offline
-#       - uses: actions/checkout@v2
-#       - name: mobile echo2
-#         run: yarn echo:push
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+
+      - name: Install dependencies
+        run: yarn install --prefer-offline
+
+      - name: mobile echo1
+        run: yarn echo:push
+
+  push-mobile-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: actions/checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+
+      - name: Install dependencies
+        run: yarn install --prefer-offline
+
+      - name: mobile echo2
+        run: yarn echo:push
