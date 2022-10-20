@@ -10,15 +10,13 @@ jobs:
   push-desktop-1:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: |
-          echo job1
-          yarn echo:push
+      - uses: actions/checkout@v2
+      - name: desktop echo1
+        run: yarn echo:push
 
   push-desktop-2:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: |
-          echo job2
-          yarn echo:push
+      - uses: actions/checkout@v2
+      - name: desktop echo2
+        run: yarn echo:push

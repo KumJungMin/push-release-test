@@ -11,15 +11,13 @@ jobs:
   push-mobile-1:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: |
-          echo job1
-          yarn echo:push
+      - uses: actions/checkout@v2
+      - name: mobile echo1
+        run: yarn echo:push
 
   push-mobile-2:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: |
-          echo job2
-          yarn echo:push
+      - uses: actions/checkout@v2
+      - name: mobile echo2
+        run: yarn echo:push
