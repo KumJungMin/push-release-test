@@ -1,0 +1,17 @@
+name-template: "desktop-v$RESOLVED_VERSION" # template 이름 형식
+tag-template: "desktop-v$RESOLVED_VERSION"
+tag-prefix: desktop-v # 릴리즈 노트 tag prefix(desktop패키지 릴리즈 노트이므로 desktop을 prefix로 함)
+include-labels: # PR의 라벨에 desktop이 포함된 경우에만 릴리즈 노트에 포함
+  - "desktop"
+include-paths: # PR의 변경된 파일 경로에 desktop이 포함된 경우에만 릴리즈 노트에 포함(공통모듈도 고려했을 때 제거할 가능성 있음)
+  - "packages/desktop"
+template: |
+  ## Changes
+  $CHANGES
+sort-by: "title"
+version-resolver:
+  minor:
+    labels:
+      - "minor"
+  default: minor
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"

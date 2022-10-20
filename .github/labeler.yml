@@ -1,0 +1,4 @@
+desktop:
+  - all: ["!packages/mobile/**/*"]
+mobile:
+  - all: ["!packages/desktop/**/*"]
