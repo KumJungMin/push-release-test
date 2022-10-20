@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./packages
+    working-directory: packages
 
 jobs:
   push-desktop-1:
