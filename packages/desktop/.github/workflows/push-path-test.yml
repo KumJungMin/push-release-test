@@ -1,0 +1,10 @@
+name: Desktop Push Test
+on:
+  push:
+    branches: [main]
+    paths: ["!packages/mobile/**"] # path 체크
+jobs:
+  staging:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo 'Desktop Push Test'
