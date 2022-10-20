@@ -3,11 +3,12 @@ on:
   push:
     branches: [main]
     paths: ["!packages/desktop/**"] # path 체크
-jobs:
-  defaults:
-    run:
-      working-directory: ./packages/mobile
 
+defaults:
+  run:
+    working-directory: ./packages/mobile
+
+jobs:
   push-mobile-1:
     runs-on: ubuntu-latest
     steps:
