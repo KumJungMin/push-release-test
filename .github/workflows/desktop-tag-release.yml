@@ -3,7 +3,7 @@ name: Desktop Tag Release
 on:
   push:
     tags: ["desktop@[0-9]+.[0-9]+.[0-9]+"] # 기본 tag 형식
-    paths-ignore: ["!packages/mobile/**"] # path 체크
+    paths-ignore: ["!packages/mobile/**"] # path 체크~
 
   release:
     types: [published]
