@@ -7,4 +7,8 @@ jobs:
   staging:
     runs-on: ubuntu-18.04
     steps:
-      - run: echo 'Desktop Push Test'
+      - name: Desktop Push Test
+      - working_directory: ./packages/desktop
+        run: |
+          echo working_directory
+          yarn echo:push

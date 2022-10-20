@@ -18,7 +18,8 @@
     "url": "git+https://github.com/KumJungMin/monorepo-versioning-test.git"
   },
   "scripts": {
-    "test": "node ./__tests__/desktop.test.js"
+    "test": "node ./__tests__/desktop.test.js",
+    "echo:push": "echo Desktop path push Successfully"
   },
   "bugs": {
     "url": "https://github.com/KumJungMin/monorepo-versioning-test/issues"
