@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./packages/mobile
+    working-directory: packages/mobile
 
 jobs:
   push-mobile-1:
