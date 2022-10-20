@@ -4,12 +4,21 @@ on:
     branches: [main]
     paths: ["!packages/mobile/**"] # path 체크
 jobs:
-  staging:
-    runs-on: ubuntu-18.04
+  defaults:
+    run:
+      working-directory: ./packages/desktop
+  push-desktop-1:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Desktop Push Test
-      - working_directory: ./packages/desktop
         run: |
-          echo working_directory
+          echo job1
           yarn echo:push
+  push-desktop-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: |
+          echo job2
+          yarn echo:push
+  p

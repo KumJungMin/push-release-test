@@ -1,15 +1,24 @@
-name: Mobile Push Test
+name: mobile Push Test
 on:
   push:
     branches: [main]
     paths: ["!packages/desktop/**"] # path 체크
 jobs:
-  staging:
-    runs-on: ubuntu-18.04
+  defaults:
+    run:
+      working-directory: ./packages/mobile
+  push-mobile-1:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Mobile Push Test
-      - working_directory: ./packages/mobile
         run: |
-          echo working_directory
+          echo job1
           yarn echo:push
+  push-mobile-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: |
+          echo job2
+          yarn echo:push
+  p
