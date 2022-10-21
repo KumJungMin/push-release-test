@@ -10,6 +10,12 @@ sort-by: "title"
 version-resolver:
   minor:
     labels:
-      - "minor"
-  default: minor
+      - "feature"
+  default: patch
+
+autolabeler:
+  - label: "feature"
+    title:
+      - "/feat/i"
+
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
