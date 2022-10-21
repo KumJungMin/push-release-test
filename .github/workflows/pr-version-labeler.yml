@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: srvaroa/labeler@master
         with:
-          config_path: .github/pr-labeler.yml
+          config_path: .github/pr-version-labeler.yml
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
