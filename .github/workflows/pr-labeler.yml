@@ -1,0 +1,14 @@
+name: PR Labeler
+
+on:
+  pull_request:
+    types: [opened, edited]
+jobs:
+  pr-labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: srvaroa/labeler@master
+        with:
+          config_path: .github/pr-labeler.yml
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

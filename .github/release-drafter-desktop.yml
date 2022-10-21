@@ -12,10 +12,4 @@ version-resolver:
     labels:
       - "feature"
   default: patch
-
-autolabeler:
-  - label: "feature"
-    title:
-      - "/feat/i"
-
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
