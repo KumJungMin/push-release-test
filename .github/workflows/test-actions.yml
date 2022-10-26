@@ -16,10 +16,10 @@ jobs:
       - uses: actions/github-script@v6
         id: version-result
         with:
-          script: return process.env.RELEASE_VERSION.split('@')[0]
+          script: return process.env.RELEASE_VERSION.split('@').at(-1)
           result-encoding: string
       - name: Get result
-        run: echo "RELEASE_VERSION_NUMBER=${{steps.version-result.outputs.result}}"
+        run: echo "RELEASE_VERSION_NUMBER=${{steps.version-result.outputs.result}}" >> $GITHUB_ENV
 
       - name: Create Sentry release
         run: echo "${{ env.RELEASE_VERSION_NUMBER }}"
