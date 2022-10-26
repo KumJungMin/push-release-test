@@ -1,8 +1,7 @@
-name: Desktop Push Test
+name: Get Version Nubmer
 on:
-  push:
-    branches: [main]
-
+  release:
+    types: [published]
 jobs:
   update-sentry-release:
     runs-on: ubuntu-latest
