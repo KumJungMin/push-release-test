@@ -1,2 +1,2 @@
-desktop: ["packages/desktop/**/*"]
-mobile: ["packages/mobile/**/*"]
+desktop: ["packages/desktop/**/*", "!packages/mobile/**/*"]
+mobile: ["packages/mobile/**/*", "!packages/desktop/**/*"]
