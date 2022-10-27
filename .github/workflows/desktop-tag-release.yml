@@ -7,8 +7,6 @@ on:
 
   release:
     types: [published]
-    tags:
-      - desktop*
 
 defaults:
   run:
@@ -17,6 +15,7 @@ defaults:
 jobs:
   push-desktop-1:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || contains(github.event.release.tag_name, 'desktop')
     steps:
       - name: actions/checkout
         uses: actions/checkout@v2
