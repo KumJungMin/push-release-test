@@ -7,7 +7,7 @@ on:
 
   release:
     types: [published]
-    tags: ["desktop@*"]
+    tags: ["mobile@*"]
 
 defaults:
   run:
