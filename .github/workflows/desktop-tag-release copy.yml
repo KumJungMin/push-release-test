@@ -7,7 +7,8 @@ on:
 
   release:
     types: [published]
-    tags: ["mobile@*"]
+    tags:
+      - mobile@*
 
 defaults:
   run:
