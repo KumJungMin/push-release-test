@@ -1,0 +1,11 @@
+name: Deploy Desktop
+on:
+  push:
+jobs:
+  deploy-web:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 20
+    steps:
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
