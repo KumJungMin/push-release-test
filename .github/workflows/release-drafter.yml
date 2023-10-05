@@ -6,7 +6,7 @@ on:
 
 jobs:
   desktop-draft-release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && github.base_ref == 'main' && contains(github.event.pull_request.labels.*.name, 'desktop')
     # closed된 PR이 main 브랜치에 merge되었을 때, 라벨에 desktop이 포함된 경우에만 실행
     steps:
@@ -18,7 +18,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   mobile-draft-release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && github.base_ref == 'main' && contains(github.event.pull_request.labels.*.name, 'mobile')
     # closed된 PR이 main 브랜치에 merge되었을 때, 라벨에 mobile가 포함된 경우에만 실행
     steps:
